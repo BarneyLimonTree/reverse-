@@ -1,13 +1,21 @@
+<form action="" method="GET">
+	<input placeholder="Введите сюда число" type="text" name="number">
+	<input type="submit">
+</form>
+
+
 <?php
-	function reverse () {
-		$a = '12345';
-		$b = str_split($a, 1);
+
+	$r = $_GET['number'] ;
+	echo $r;
+	function reverse (&$r) {
+		$b = str_split($r, 1);
 		$c = array_reverse($b);
 		$f = implode('', $c);
 		echo($f);
-	}
-	reverse();
-
+	};
+	echo "<br>";
+	reverse ($r);
 
 
 
